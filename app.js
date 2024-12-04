@@ -11,11 +11,9 @@ const methodOverride=require("method-override")
 const ejsMate=require("ejs-mate")
 const wrapAsync=require("./utils/wrapAsync.js")
 const expressError=require("./utils/expressError.js")
-const {listingSchema,reviewSchema}=require("./schema.js")
-const Review=require("./models/review.js")
+const {listingSchema}=require("./schema.js")
 
 const listings=require("./routes/listing.js");
-const reviews=require("./routes/review.js")
 const user=require("./routes/user.js")
 
 const session=require("express-session")
@@ -26,7 +24,7 @@ const LocalStretegy=require("passport-local")
 const User=require("./models/user.js")
 
 
-// const MONGO_URL="mongodb://127.0.0.1:27017/sevaProjectDb";
+// const MONGO_URL="mongodb://127.0.0.1:27017/ExpanseTracker";
 const dburl=process.env.ATLASDB_URL
 
 async function main() {
@@ -40,7 +38,7 @@ main().then(()=>{
 })
 
 app.get("/", (req, res) => {
-  res.redirect("/listings/home");
+  res.redirect("/listings");
 });
 
 app.set("view engine","ejs");
@@ -97,7 +95,6 @@ app.use((req,res,next)=>{
 
 
 app.use("/listings",listings)
-app.use("/listings/:id/reviews",reviews)
 app.use("/",user)
 
 app.all("*",(req,res,next)=>{
@@ -108,6 +105,6 @@ app.use((err,req,res,next)=>{
     let {statuscode=500,message="Something went wrong"}=err
     res.render("error.ejs",{message})
 })
-app.listen(7000,()=>{
-    console.log("server is listing on port 7000")
+app.listen(5000,()=>{
+    console.log("server is listing on port 5000")
 })

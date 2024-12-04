@@ -2,7 +2,7 @@ const mongoose=require("mongoose");
 const initDdata=require("./data.js");
 const Listing=require("../models/listing.js")
 
-const MONGO_URL="mongodb://127.0.0.1:27017/sevaProjectDb";
+const MONGO_URL="mongodb://127.0.0.1:27017/ExpanseTracker";
 async function main() {
     await mongoose.connect(MONGO_URL);
 } 

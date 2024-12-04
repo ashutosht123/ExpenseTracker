@@ -42,35 +42,35 @@
 <body>
   <div id="filters">
     <div class="filter">
-    <h1>Available Food</h1>
+    <h2>Available Balance: <b class="green">₹<%= totalBalance %></b></h2>
     </div>
-    <div class="tax-toggle">
-      <div class="form-check-reverse form-switch">
-        <input class="form-check-input input-lg" type="checkbox" role="switch" id="flexSwitchCheckDefault">
-        <label class="form-check-label" for="flexSwitchCheckDefault">Display Food Type (V/N)</label>
+      <div class="filter">
+        <h2>Total Expenses: <b class="red">₹<%= totalExpenses %></b></h1>
       </div>
-    </div>
   </div>
+
     <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1 mt-3">
+      
         <% for(let listing of allListings){ %>
-            <div class="card listing-card" style="width: 30rem;">
+            <div class="card listing-card py-2" style="width: 30rem;">
               <a href="/listings/<%= listing._id %>" class="listing-link">
-                <img src="<%= listing.image.url %>" class="card-img-top" height="500rem" alt="Listing_img">
                 <div class="card-img-overlay"></div>
                 <div class="card-body">
                   <p class="card-text">
-                      <b><%= listing.title %></b>
-                      <% if (listing.country === "veg") { %>
-                        &nbsp;&nbsp;<img class="tax-info" height="30px" width="30px" src="https://i.pinimg.com/736x/e4/1f/f3/e41ff3b10a26b097602560180fb91a62.jpg" alt="">
-                      <% } else { %>
-                        &nbsp;&nbsp;<img class="tax-info" height="30px" width="30px" src="https://cdn.vectorstock.com/i/1000v/00/43/non-vegetarian-sign-veg-logo-symbol-vector-50890043.jpg" alt="">
-                      <% } %>
+                    <% if(listing.Type=="salary") { %>
+                      Added Amount:<b><%= listing.price %></b><br>
+                      <%= listing.description %>
+                    <% } else { %> 
+                      Added Expences: <b>₹<%= listing.price %></b><br>
+                      <%= listing.description %>
+                    <% } %>
                   </p>
               </div>              
               </a>
               </div>
               <% } %>
     </div>
+
 </body>
 <script>
   let taxSwitch=document.getElementById("flexSwitchCheckDefault")

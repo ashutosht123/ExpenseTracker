@@ -23,20 +23,20 @@
 
 <nav class="navbar navbar-expand-md bg-body-light border-bottom sticky-top py-3">
     <div class="container-fluid">
-      <a class="navbar-brand" href="/listings"><i class="fa-solid fa-bowl-food"></i></a>
+      <a class="navbar-brand" href="/listings"><i style="color: white;" class="fa-solid fa-money-bill-transfer"></i></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" >
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-          <a class="nav-link" href="/listings/home">Home</a>
-          <a class="nav-link" href="/listings">Available Food</a>
-          <a class="nav-link" href="/listings/new">Donate Food</a>
+          <a class="nav-link" href="/listings">Home</a>
+          <a class="nav-link" href="/listings">All Expences</a>
+          <a class="nav-link" href="/listings/new">Add New</a>
         </div>
         <div class="navbar-nav search-bar">
           <form class="d-flex needs-validation" role="search" action="/listings/results" method="GET" novalidate >
-            <input style="height: 50px; width: 500px" class="form-control me-2 search-input" type="text" id="searchInput" name="title" placeholder="Search Food Here" aria-label="Search" required>
-            <button style="border-radius: 3rem !important;" onclick="performSearch()" class="btn btn-search ms-0" type="submit"><i class="fa-solid fa-magnifying-glass"></i>Search</button>
+            <input style="height: 50px; width: 500px" class="form-control me-2 search-input" type="text" id="searchInput" name="title" placeholder="Search expenses here" aria-label="Search" required>
+            <button style="border-radius: 3rem !important; color: white;" onclick="performSearch()" class="btn btn-search ms-0" type="submit"><i class="fa-solid fa-magnifying-glass"></i>Search</button>
           </form>
           <div class="invalid-feedback">Price should be valid</div>
         </div>

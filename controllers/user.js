@@ -15,7 +15,7 @@ module.exports.signup=async(req,res)=>{
          if(err){
              return next(err)
          }
-         req.flash("success","Welcome to Seva")
+         req.flash("success","Welcome to Expense Tracker")
          res.redirect("/listings")
      })
     }
@@ -30,7 +30,7 @@ module.exports.signup=async(req,res)=>{
 }
 
 module.exports.login=async(req,res)=>{
-    req.flash("success","Welcome to Seva you are Loged in!")
+    req.flash("success","Welcome to Expense Tracker you are Loged in!")
     let redirectUrl=res.locals.redirectUrl || "/listings"
     res.redirect(redirectUrl)
 }

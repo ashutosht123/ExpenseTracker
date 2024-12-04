@@ -27,10 +27,10 @@ body{
   }
   
   
-html {
+/* html {
     transform: scale(0.67); 
     transform-origin: top left;
-}
+} */
 .home-div{
     display: flex;
     flex-wrap: wrap;
@@ -78,17 +78,17 @@ html {
 .nav-link{
     font-size: 27px !important;
     margin-left: 15px;
-    color: #222222 !important;
+    color: white !important;
 }
 .fa-bowl-food,.fa-user{
-    color: black;
+    color: white;
 }
 .logout{
     margin-right: 1rem !important;
     margin-top: 1rem !important;
 }
 .navbar{
-    background-color: #EB8317 !important;
+    background-color: #1C325B !important;
 }
 .search-input{
     border: #ebebeb !important;
@@ -118,17 +118,17 @@ html {
   
 .f-info-links a{
     text-decoration: none;
-    color: #222222;
+    color: white;
 }
 .f-info-links a:hover{
     text-decoration: underline;
-    color: #222222;
+    color: white;
 }
 .f-info{
     text-align: center;
     height: 14rem;
     display: flex;
-    background-color: #EB8317;
+    background-color: #1C325B;
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: space-evenly;
@@ -169,7 +169,6 @@ fooetr{
     font-size: 25px;
     color: #222222;
 }
-
 .listing-card{
     border: none !important;
     margin-bottom: 2rem;
@@ -207,15 +206,13 @@ fooetr{
     margin-bottom: 1rem;
     border-radius: 10px !important;
     font-size: 25px !important;
-    background-color:  #EB8317 !important;
-    border-color: #EB8317 !important;
+    background-color:  #1C325B !important;
+    border-color: #1C325B !important;
 }
 .form-label{
     font-size: 25px !important;
 }
-.show-img{
-    height: 30vh;
-}
+
 .btn-dark{
     padding: 0% !important;
 }
@@ -244,10 +241,7 @@ fooetr{
 .flash-msg{
     font-size: 25px !important;
 }
-#map { 
-    height: 600px; 
-    width: 91vh;
-}
+
 .search-bar{
     margin-left: 17rem !important;
     margin-top: 1rem !important;
@@ -256,6 +250,16 @@ fooetr{
     margin-top: 1rem;
 }
 
+.listing-card{
+   border: 1px solid black !important;
+   border-radius: 10px !important;
+}
+.green{
+    color: rgb(1, 179, 1) !important;
+}
+.red{
+    color: red !important;
+}
 @media only screen and (max-width: 1880px) {
     /* .copyright{
         font-size: 17px;
@@ -292,7 +296,7 @@ fooetr{
     .nav-link{
         font-size: 27px !important;
         margin-left: 15px;
-        color: #222222 !important;
+        color: white !important;
     }
     .navbar{
         padding-top: 0% !important;
@@ -323,10 +327,7 @@ fooetr{
     .review-card-col{
         width: 780px !important;
     }
-    #map { 
-        height: 600px; 
-        width: 75vh;
-    }
+    
     .search-bar{
         margin-left: 9rem !important;
         margin-top: 1rem !important;
@@ -339,7 +340,7 @@ fooetr{
     }
     .card-text{
         font-size: 20px;
-        color: #222222;
+        color: white;
     }
     .card-img-top{
         height: 25rem;
@@ -389,7 +390,7 @@ fooetr{
         text-align: center;
         height: 10rem;
         display: flex;
-        background-color: #EB8317;
+        background-color: #1C325B;
         flex-wrap: wrap;
         justify-content: center;
         align-items: space-evenly;
